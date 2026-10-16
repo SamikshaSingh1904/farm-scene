@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>StarDew Project</title>
+    <style>
+      canvas {
+          display: block;
+          width: 100%;
+          height: 500px;
+          border: 2px solid green;
+          margin-top: 20px;
+          margin-bottom: 20px;
+      }
+
+      .key-control {
+          background-color: #f0f0f0;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          padding: 2px 5px;
+          font-family: monospace;
+          margin-right: 5px;
+      }
+
+      .controls-container {
+          margin-top: 20px;
+          padding: 15px;
+          background-color: #f8f8f8;
+          border-radius: 5px;
+      }
+
+      .important-note {
+          background-color: #fffacd;
+          padding: 10px;
+          border-left: 4px solid #ffd700;
+          margin: 15px 0;
+      }
+    </style>
+</head>
+<body>
+    <h1>StarDew Project</h1>
+
+    <div class="important-note">
+        <h3>Ready for some fun? Try guiding your bunny or chicken to face the yummy treats as they move! Or get creative, can you make interesting patterns in the fields by using the move controls to skip some plants?</h3>
+        <p>Use these keyboard controls to help your animal face what they eat:</p>
+        <p><strong>Bunny orientation:</strong> <span class="key-control">F</span> (forward), <span class="key-control">H</span> (left), <span class="key-control">G</span> (right), <span class="key-control">B</span> (backward)</p>
+        <p><strong>Chicken orientation:</strong> <span class="key-control">T</span> (forward), <span class="key-control">U</span> (left), <span class="key-control">Y</span> (right), <span class="key-control">N</span> (backward)</p>
+    
+                
+        <p>Overview of all the other keyboard controls:</p>
+        <p><strong>Camera Views:</strong> <span class="key-control">1</span>-Front, <span class="key-control">2</span>-Overhead, <span class="key-control">3</span>-Bunny Field, <span class="key-control">4</span>-Hen Field, <span class="key-control">5</span>-Back, <span class="key-control">6</span>-Ground level</p>
+        <p><strong>Bunny:</strong> Move (<span class="key-control">S</span>-Up, <span class="key-control">A</span>-Left, <span class="key-control">W</span>-Down, <span class="key-control">D</span>-Right)| <strong>Chicken:</strong> Move (<span class="key-control">K</span>-Up, <span class="key-control">J</span>-Left, <span class="key-control">I</span>-Down, <span class="key-control">L</span>-Right)</p>
+    </div>
+
+
+
+
+    <script type="module" src="main.js"></script>
+
+    
+    </div>
+
+    <script type="importmap">
+        {
+          "imports": {
+              "three": "https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.module.js",
+              "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/",
+              "tw": "https://cs.wellesley.edu/~cs307/threejs/libs/tw-sp25.js"
+          }
+        }
+    </script>
+    <script src="https://cs.wellesley.edu/~cs307/threejs/libs/dat.gui-r95.js">
+      "https://cs.wellesley.edu/~cs307/threejs/libs/dat.gui.min.js"
+    </script>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name=author content="Samiksha Singh">
+    <title>CS 307 Graphics Project by Samiksha Singh</title>
+    <style>
+        body { 
+            margin: 2em;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1, h2 {
+            color: #4b8a3a;
+        }
+        .controls {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .controls h3 {
+            margin-top: 0;
+        }
+        .key-control {
+            display: inline-block;
+            background: #eee;
+            padding: 5px 10px;
+            margin: 3px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+        figcaption {
+            font-style: italic;
+            margin-top: 8px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <h1>CS 307 Graphics Project by Samiksha Singh</h1>
+    
+    <h2>Basic Idea</h2>
+    
+    <p>For my project, I created a 3D interactive scene inspired by Stardew Valley, one of my favorite games. I wanted to challenge myself to recreate elements from this 2D game in a 3D environment using Three.js. The scene features a bunny hopping through a carrot field, a chicken hopping through a lettuce field, and a barn in the background.</p>
+    
+    <p>I was inspired by the peaceful farm environment from Stardew Valley and wanted to capture that same charming, relaxing atmosphere while adding interactive elements.</p>
+    
+    <figure>
+        <img src="stardew.jpg" alt="Stardew Valley game screenshot">
+        <figcaption>Stardew Valley's iconic farm setting that inspired my 3D scene</figcaption>
+    </figure>
+    
+    <h2>My Project</h2>
+    
+    <p>My 3D scene contains several key elements:</p>
+    
+    <ol>
+        <li><strong>Interactive Animals:</strong> Both the bunny and chicken hop through their respective fields in a zigzag pattern, eating vegetables as they go.</li>
+        <li><strong>Vegetable Fields:</strong> The scene has a carrot field on the right side and a lettuce field on the left side, organized in grids.</li>
+        <li><strong>Barn Structure:</strong> A barn with texture mapped walls sits in the background.</li>
+        <li><strong>User Controls:</strong> The scene allows the user to control camera angles and animal movements through keyboard inputs.</li>
+        <li><strong>Animation:</strong> Animals hop with realistic bouncing motion and can face different directions.</li>
+    </ol>
+    
+    <p>The most challenging aspects were creating the zigzag hopping pattern for the animals and implementing proper collision detection for when they "eat" vegetables. I ended up using a grid-based system with row and column tracking to manage the positions and interactions.</p>
+    
+    <div class="controls">
+        <h3>Camera Controls</h3>
+        <p><span class="key-control">1</span> Default camera view</p>
+        <p><span class="key-control">2</span> Overhead view</p>
+        <p><span class="key-control">3</span> Bunny field view</p>
+        <p><span class="key-control">4</span> Hen field view</p>
+        <p><span class="key-control">5</span> Back view</p>
+        <p><span class="key-control">6</span> Ground level view</p>
+        
+        <h3>Bunny Controls</h3>
+        <p><span class="key-control">S</span> Move bunny up</p>
+        <p><span class="key-control">A</span> Move bunny left</p>
+        <p><span class="key-control">W</span> Move bunny down</p>
+        <p><span class="key-control">D</span> Move bunny right</p>
+        <p><span class="key-control">F</span> Bunny face forward</p>
+        <p><span class="key-control">H</span> Bunny face left</p>
+        <p><span class="key-control">G</span> Bunny face right</p>
+        <p><span class="key-control">B</span> Bunny face backward</p>
+        
+        <h3>Chicken Controls</h3>
+        <p><span class="key-control">K</span> Move chicken up</p>
+        <p><span class="key-control">J</span> Move chicken left</p>
+        <p><span class="key-control">I</span> Move chicken down</p>
+        <p><span class="key-control">L</span> Move chicken right</p>
+        <p><span class="key-control">T</span> Chicken face forward</p>
+        <p><span class="key-control">U</span> Chicken face left</p>
+        <p><span class="key-control">Y</span> Chicken face right</p>
+        <p><span class="key-control">N</span> Chicken face backward</p>
+        
+        
+    </div>
+    
+    <p>The project uses modular code organization, with separate files for each 3D model (bunny, hen, carrot, lettuce, barn, etc.). This approach made the code more maintainable and allowed me to focus on one component at a time.</p>
+    
+    <figure>
+        <img src="pic1.jpg" alt="Screenshot of the 3D scene">
+        <figcaption>Overview of the complete 3D scene showing both animal fields and the barn</figcaption>
+    </figure>
+    
+    <figure>
+        <img src="pic2.jpg" alt="Close-up of bunny in carrot field">
+        <figcaption>Close-up view of the bunny hopping through the carrot field</figcaption>
+    </figure>
+    
+    <h2>Technical Highlights</h2>
+    
+    <p>Some of the key technical aspects I implemented include:</p>
+    
+    <ul>
+        <li><strong>Animation:</strong> Used sine functions for realistic hopping motion</li>
+        <li><strong>Grid Organization:</strong> Organized vegetables in grids for efficient collision detection</li>
+        <li><strong>Camera Presets:</strong> Created multiple camera views to showcase different angles of the scene</li>
+        <li><strong>Direction Control:</strong> Independent control of animal movement and facing direction</li>
+        <li><strong>Texture Mapping:</strong> Applied dirt textures to the ground with proper repeating patterns</li>
+        <li><strong>Scene Lighting:</strong> Implemented ambient and directional lighting for realistic shadows</li>
+    </ul>
+    
+    <p>When an animal completes eating all vegetables in their field, the field regenerates automatically, allowing for continuous animation.</p>
+    
+    <h2>The Running Project</h2>
+    
+    <p>Here is a <a href="main.html">link to the project itself</a>. Use the keyboard controls listed above to interact with the scene!</p>
+</main>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cs.wellesley.edu/~anderson/js/bounds/bounds-plugin.js"></script>
+
+</body>
+</html>
